@@ -20,7 +20,7 @@ export const homeStatic: Page = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: 'Blog de Tinta',
                 version: 1,
               },
             ],
@@ -81,8 +81,8 @@ export const homeStatic: Page = {
     },
   },
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
-    title: 'Payload Website Template',
+    title: 'Tinta - Educación y Marketing del vino',
+    description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino',
   },
   title: 'Home',
 }
