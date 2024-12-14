@@ -11,14 +11,15 @@ import { SearchIcon } from 'lucide-react'
 import { ThemeToggle } from '@/components/shadcn/theme-toggle'
 import LanguageToggle from './locale-toggle'
 import Menu from './menu'
+import MobileMenu from './MobileMenu'
 
 interface HeaderClientProps {
   data: Header
 }
 
 export const HeaderClient: React.FC<HeaderClientProps> = () => {
-  /* Storing the value in a useState to avoid hydration errors */
   const [theme, setTheme] = useState<string | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { headerTheme, setHeaderTheme } = useHeaderTheme()
   const pathname = usePathname()
 
@@ -33,22 +34,60 @@ export const HeaderClient: React.FC<HeaderClientProps> = () => {
   }, [headerTheme])
 
   return (
-    <header className="container relative z-20   " {...(theme ? { 'data-theme': theme } : {})}>
-      <div className="py-8 flex justify-between">
-        <Link href="/">
-          <Logo loading="eager" priority="high" className="invert dark:invert-0" />
-        </Link>
-        {/* <HeaderNav data={data} /> */}
-        <Menu />
-        <div className="items-center hidden sm:flex">
-          <LanguageToggle />
-          <ThemeToggle />
-          <Link href="/search">
-            <span className="sr-only">Search</span>
-            <SearchIcon className="w-5 text-primary" />
-          </Link>
+    <>
+      <header className="container relative z-20" {...(theme ? { 'data-theme': theme } : {})}>
+        <div className="py-8 flex justify-between items-center">
+          {/* Mobile Header */}
+          <div className="flex sm:hidden items-center w-full justify-between">
+            <button
+              className="text-primary p-2"
+              aria-label="Menu"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+
+            <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
+              <Logo loading="eager" priority="high" className="invert dark:invert-0" />
+            </Link>
+
+            <div className="flex items-center">
+              <LanguageToggle />
+            </div>
+          </div>
+
+          {/* Desktop Header */}
+          <div className="hidden sm:flex w-full justify-between items-center">
+            <Link href="/">
+              <Logo loading="eager" priority="high" className="invert dark:invert-0" />
+            </Link>
+            <Menu />
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <ThemeToggle />
+              <Link href="/search">
+                <span className="sr-only">Search</span>
+                <SearchIcon className="w-5 text-primary" />
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+    </>
   )
 }
