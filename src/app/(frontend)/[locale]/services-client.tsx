@@ -22,9 +22,9 @@ export default function ServicesClient({ title, description, data, spanFirst }: 
 
   return (
     <section className="w-full py-6 md:py-12 text-gray-800 dark:text-white mt-10">
-      <h1 className="text-4xl font-semibold text-center text-tinta-verde mb-8 dark:text-white">
+      <h2 className="text-4xl font-semibold text-center text-tinta-verde mb-8 dark:text-white">
         {title}
-      </h1>
+      </h2>
       <p className="container text-center text-lg mb-8">{description}</p>
       <div className="container flex items-center justify-center px-8 text-center md:px-6">
         <div
