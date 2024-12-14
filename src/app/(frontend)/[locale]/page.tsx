@@ -2,12 +2,15 @@ import { getScopedI18n } from '@/locales/server'
 import ClientsWrapper from './clients-wrapper'
 import Hero from './hero'
 import Services from './services'
+import PageClient from '@/app/(frontend)/[locale]/posts/page.client'
 
 export default async function LanguagePage() {
   const tLastSection = await getScopedI18n('landing.lastSection')
 
   return (
     <div className="flex flex-col items-center">
+      <PageClient />
+
       <Hero />
 
       <div className="w-full max-w-[1000px] mx-auto">
