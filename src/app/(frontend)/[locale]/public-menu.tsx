@@ -21,11 +21,11 @@ export default function PublicMenu({ onClose }: PublicMenuProps) {
   }
 
   const data = [
-    {
-      href: '/about',
-      text: t('about'),
-      disabled: true,
-    },
+    // {
+    //   href: '/about',
+    //   text: t('about'),
+    //   disabled: true,
+    // },
     {
       href: `/agency`,
       text: t('agency'),
