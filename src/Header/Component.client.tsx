@@ -39,9 +39,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = () => {
           <Logo loading="eager" priority="high" className="invert dark:invert-0" />
         </Link>
         {/* <HeaderNav data={data} /> */}
-
         <Menu />
-
         <div className="items-center hidden sm:flex">
           <LanguageToggle />
           <ThemeToggle />

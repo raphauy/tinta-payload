@@ -1,5 +1,5 @@
 {
-  "name": "tinta-payload-blog",
+  "name": "tinta-payload",
   "version": "1.0.0",
   "description": "Website template for Payload",
   "license": "MIT",
@@ -76,6 +76,6 @@
     "typescript": "5.7.2"
   },
   "engines": {
-    "node": "^18.20.2 || >=20.9.0"
+    "node": ">=20.9.0"
   }
 }
