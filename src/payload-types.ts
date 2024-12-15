@@ -376,6 +376,7 @@ export interface Category {
 export interface Post {
   id: number;
   title: string;
+  language: 'en' | 'es';
   content: {
     root: {
       type: string;
@@ -899,6 +900,7 @@ export interface PagesSelect<T extends boolean = true> {
  */
 export interface PostsSelect<T extends boolean = true> {
   title?: T;
+  language?: T;
   content?: T;
   relatedPosts?: T;
   categories?: T;

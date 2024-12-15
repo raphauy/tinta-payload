@@ -75,9 +75,17 @@ export const Posts: CollectionConfig<'posts'> = {
       required: true,
     },
     {
+      name: 'language',
+      type: 'select',
+      options: ['en', 'es'],
+      defaultValue: 'es',
+      required: true,
+    },
+    {
       type: 'tabs',
       tabs: [
         {
+          label: 'Content',
           fields: [
             {
               name: 'content',
@@ -98,9 +106,9 @@ export const Posts: CollectionConfig<'posts'> = {
               required: true,
             },
           ],
-          label: 'Content',
         },
         {
+          label: 'Meta',
           fields: [
             {
               name: 'relatedPosts',
@@ -128,11 +136,10 @@ export const Posts: CollectionConfig<'posts'> = {
               relationTo: 'categories',
             },
           ],
-          label: 'Meta',
         },
         {
-          name: 'meta',
           label: 'SEO',
+          name: 'meta',
           fields: [
             OverviewField({
               titlePath: 'meta.title',

@@ -1,11 +1,14 @@
 import { Button } from '@/components/ui/button'
-import { getScopedI18n } from '@/locales/server'
+import { getCurrentLocale, getScopedI18n } from '@/locales/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageClient from '@/app/(frontend)/[locale]/posts/page.client'
 
 export default async function Page() {
   const t = await getScopedI18n('academy')
+
+  const language = await getCurrentLocale()
+  console.log('language', language)
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl text-foreground mt-11">

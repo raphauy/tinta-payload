@@ -11,7 +11,14 @@ import PageClient from './page.client'
 export const dynamic = 'force-static'
 export const revalidate = 600
 
-export default async function Page() {
+type Props = {
+  params: {
+    locale: string
+  }
+}
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params
   const payload = await getPayload({ config: configPromise })
 
   const posts = await payload.find({
@@ -19,6 +26,11 @@ export default async function Page() {
     depth: 1,
     limit: 12,
     overrideAccess: false,
+    where: {
+      language: {
+        equals: locale,
+      },
+    },
     select: {
       title: true,
       slug: true,
@@ -26,6 +38,7 @@ export default async function Page() {
       meta: true,
     },
   })
+  console.log('posts count', posts.totalDocs)
 
   return (
     <div className="pt-24 pb-24">
