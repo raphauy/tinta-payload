@@ -14,6 +14,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Excluye /admin y todo lo que venga después de /admin
-    '/((?!api|static|.*\\..*|_next|favicon.ico|robots.txt|admin/.*|admin$).*)',
+    '/((?!api|static|.*\\..*|_next|favicon.ico|favicon.svg|robots.txt|admin/.*|admin$).*)',
   ],
 }
