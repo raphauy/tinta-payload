@@ -12,9 +12,9 @@ export const dynamic = 'force-static'
 export const revalidate = 600
 
 type Props = {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
 export default async function Page({ params }: Props) {
