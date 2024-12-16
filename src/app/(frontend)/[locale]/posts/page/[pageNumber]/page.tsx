@@ -13,12 +13,13 @@ export const revalidate = 600
 
 type Args = {
   params: Promise<{
+    locale: string
     pageNumber: string
   }>
 }
 
 export default async function Page({ params: paramsPromise }: Args) {
-  const { pageNumber } = await paramsPromise
+  const { locale, pageNumber } = await paramsPromise
   const payload = await getPayload({ config: configPromise })
 
   const sanitizedPageNumber = Number(pageNumber)
@@ -48,6 +49,7 @@ export default async function Page({ params: paramsPromise }: Args) {
           currentPage={posts.page}
           limit={12}
           totalDocs={posts.totalDocs}
+          locale={locale}
         />
       </div>
 

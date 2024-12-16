@@ -140,6 +140,10 @@ export default {
     sostenibilidadDescription:
       'Nos comprometemos con prácticas sostenibles, pensando en el cuidado de nuestro planeta y en dejarlo mejor de lo que lo encontramos.',
   },
+  blog: {
+    showing: 'Mostrando',
+    posts: 'posts',
+  },
   menu: {
     about: 'Nosotros',
     agency: 'Agency',

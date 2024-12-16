@@ -22,6 +22,7 @@ export const PageRange: React.FC<{
   currentPage?: number
   limit?: number
   totalDocs?: number
+  locale: string
 }> = (props) => {
   const {
     className,
@@ -30,6 +31,7 @@ export const PageRange: React.FC<{
     currentPage,
     limit,
     totalDocs,
+    locale,
   } = props
 
   let indexStart = (currentPage ? currentPage - 1 : 1) * (limit || 1) + 1
@@ -41,12 +43,15 @@ export const PageRange: React.FC<{
   const { plural, singular } =
     collectionLabelsFromProps || defaultCollectionLabels[collection || ''] || defaultLabels || {}
 
+  const mostrandoLabel = locale === 'es' ? 'Mostrando' : 'Showing'
+  const deLabel = locale === 'es' ? 'de' : 'of'
+
   return (
     <div className={[className, 'font-semibold'].filter(Boolean).join(' ')}>
       {(typeof totalDocs === 'undefined' || totalDocs === 0) && 'Search produced no results.'}
       {typeof totalDocs !== 'undefined' &&
         totalDocs > 0 &&
-        `Showing ${indexStart}${indexStart > 0 ? ` - ${indexEnd}` : ''} of ${totalDocs} ${
+        `${mostrandoLabel} ${indexStart}${indexStart > 0 ? ` - ${indexEnd}` : ''} ${deLabel} ${totalDocs} ${
           totalDocs > 1 ? plural : singular
         }`}
     </div>

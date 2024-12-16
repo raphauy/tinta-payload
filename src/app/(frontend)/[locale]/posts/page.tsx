@@ -55,6 +55,7 @@ export default async function Page({ params }: Props) {
           currentPage={posts.page}
           limit={12}
           totalDocs={posts.totalDocs}
+          locale={locale}
         />
       </div>
 

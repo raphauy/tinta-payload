@@ -138,6 +138,10 @@ export default {
     sostenibilidadDescription:
       'We are committed to sustainable practices, thinking about the care of our planet and leaving it better than we found it.',
   },
+  blog: {
+    showing: 'Showing',
+    posts: 'posts',
+  },
   menu: {
     about: 'About',
     agency: 'Agency',
