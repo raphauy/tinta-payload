@@ -1,7 +1,7 @@
 {
   "name": "tinta-payload",
   "version": "1.0.0",
-  "description": "Website template for Payload",
+  "description": "TintaWebsite",
   "license": "MIT",
   "type": "module",
   "scripts": {
