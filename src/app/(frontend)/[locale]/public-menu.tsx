@@ -32,9 +32,10 @@ export default function PublicMenu({ onClose }: PublicMenuProps) {
       disabled: false,
     },
     {
-      href: `/academy`,
+      href: `https://academy.tinta.wine`,
       text: t('academy'),
       disabled: false,
+      target: '_blank',
     },
     {
       href: `/manifesto`,
@@ -54,7 +55,11 @@ export default function PublicMenu({ onClose }: PublicMenuProps) {
         {data.map((item, index) => {
           return (
             <li key={index} className={cn('border-b-primary', path === item.href && 'border-b-2')}>
-              <Link href={item.disabled ? '#' : item.href} onClick={handleClick}>
+              <Link
+                href={item.disabled ? '#' : item.href}
+                onClick={handleClick}
+                target={item.target ?? '_self'}
+              >
                 <Button
                   variant="ghost"
                   className="text-base dark:text-white"
