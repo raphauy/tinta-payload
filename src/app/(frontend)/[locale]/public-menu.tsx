@@ -62,7 +62,7 @@ export default function PublicMenu({ onClose }: PublicMenuProps) {
               >
                 <Button
                   variant="ghost"
-                  className="text-base dark:text-white"
+                  className="text-base text-foreground hover:text-foreground hover:bg-transparent focus:text-foreground"
                   disabled={item.disabled}
                 >
                   {item.text}

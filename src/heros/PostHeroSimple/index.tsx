@@ -18,7 +18,7 @@ export const PostHeroSimple: React.FC<{
     <div className="flex flex-col">
       <div className="container py-12">
         <div className="max-w-[48rem] mx-auto">
-          <div className="uppercase text-sm mb-6">
+          <div className="uppercase text-sm mb-6 text-primary">
             {categories?.map((category, index) => {
               if (typeof category === 'object' && category !== null) {
                 const { title: categoryTitle } = category
@@ -39,21 +39,23 @@ export const PostHeroSimple: React.FC<{
           </div>
 
           <div className="">
-            <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl">{title}</h1>
+            <h1 className="mb-6 text-3xl md:text-5xl lg:text-6xl text-foreground">{title}</h1>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 md:gap-16">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-16 text-foreground">
             {hasAuthors && (
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col gap-1">
-                  <p className="text-sm">{post.language === 'es' ? 'Autor' : 'Author'}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {post.language === 'es' ? 'Autor' : 'Author'}
+                  </p>
                   <p>{formatAuthors(populatedAuthors)}</p>
                 </div>
               </div>
             )}
             {publishedAt && (
               <div className="flex flex-col gap-1">
-                <p className="text-sm">
+                <p className="text-sm text-muted-foreground">
                   {post.language === 'es' ? 'Fecha de publicación' : 'Date Published'}
                 </p>
                 <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
