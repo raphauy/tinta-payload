@@ -12,6 +12,7 @@ import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { draftMode } from 'next/headers'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 
 import './globals.css'
 import Script from 'next/script'
@@ -38,27 +39,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Header />
           {children}
           <Footer />
+          <WhatsAppButton />
         </Providers>
-
-        <Script id="chatwoot" strategy="afterInteractive">
-          {`
-              window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Chatea con nosotros"};
-              (function(d,t) {
-                var BASE_URL="https://agentes.agency-planner.com";
-                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                g.src=BASE_URL+"/packs/js/sdk.js";
-                g.defer = true;
-                g.async = true;
-                s.parentNode.insertBefore(g,s);
-                g.onload=function(){
-                  window.chatwootSDK.run({
-                    websiteToken: 'muk8sLWJ1mSrhoEWS8iy4nPW',
-                    baseUrl: BASE_URL
-                  })
-                }
-              })(document,"script");
-            `}
-        </Script>
 
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`

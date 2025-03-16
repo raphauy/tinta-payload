@@ -18,7 +18,7 @@ export const PostHeroSimple: React.FC<{
     <div className="flex flex-col">
       <div className="container py-12">
         <div className="max-w-[48rem] mx-auto">
-          <div className="uppercase text-sm mb-6 text-primary">
+          <div className="uppercase text-sm mb-6">
             {categories?.map((category, index) => {
               if (typeof category === 'object' && category !== null) {
                 const { title: categoryTitle } = category
