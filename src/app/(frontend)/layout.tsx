@@ -83,6 +83,7 @@ export const metadata: Metadata = {
     url: 'https://tinta.wine',
     title: 'Tinta - Embajadores de la Cultura del Vino',
     description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino',
+    authors: ['Tinta Wine'],
     images: [
       {
         url: 'https://tinta.wine/Tinta_Logotipo_Fondo-transparente.png',
