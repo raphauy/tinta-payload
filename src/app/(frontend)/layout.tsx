@@ -72,7 +72,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 
 export const metadata: Metadata = {
-  title: 'Tinta - Educación y Marketing del vino',
+  title: 'Tinta - Embajadores de la Cultura del Vino',
   description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino',
   //<meta property="twitter:image" content="Twitter link preview image URL">
   twitter: {
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: 'https://tinta.wine',
-    title: 'Tinta - Educación y Marketing del vino',
+    title: 'Tinta - Embajadores de la Cultura del Vino',
     description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino',
     images: [
       {

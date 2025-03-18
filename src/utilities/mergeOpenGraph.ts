@@ -4,7 +4,7 @@ import { getServerSideURL } from './getURL'
 const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
   siteName: 'Tinta Wine',
-  title: 'Tinta - Educación y Marketing del vino',
+  title: 'Tinta - Embajadores de la Cultura del Vino',
   description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino.',
   images: [
     {
