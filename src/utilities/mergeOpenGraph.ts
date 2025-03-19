@@ -5,10 +5,11 @@ const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
   siteName: 'Tinta Wine',
   title: 'Tinta - Embajadores de la Cultura del Vino',
-  description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino.',
+  description:
+    'Impulsamos el mundo del vino con marketing, comunicación y educación certificada, compartiendo conocimiento para conectar y crecer.',
   images: [
     {
-      url: `${getServerSideURL()}/Tinta_Logotipo_Fondo-transparente.png`,
+      url: `${getServerSideURL()}/Tinta_Open_Graph.jpg`,
     },
   ],
 }

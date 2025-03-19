@@ -82,7 +82,8 @@ export const homeStatic: Page = {
   },
   meta: {
     title: 'Tinta - Embajadores de la Cultura del Vino',
-    description: 'Sitio web de Tinta, una agencia de marketing especializada en el sector del vino',
+    description:
+      'Impulsamos el mundo del vino con marketing, comunicación y educación certificada, compartiendo conocimiento para conectar y crecer.',
   },
   title: 'Home',
 }
