@@ -97,6 +97,65 @@ export default {
         description:
           'Ofrecemos soluciones de diseño gráfico personalizadas y exclusivas para marcas de vinos, asegurando que cada elemento visual esté alineado con la identidad de la marca. Desde fichas técnicas hasta presentaciones de marca, folletos y tarjetas personales, nos enfocamos en presentar tu marca de manera profesional y coherente, tanto en medios físicos como digitales.',
       },
+      whatsapp: {
+        Title: 'Módulo Whatsapp',
+        description:
+          'Diseñamos flujos conversacionales que responden consultas con claridad, lenguaje natural y foco comercial. Una solución pensada para marcas que venden productos o experiencias vinculadas al vino.',
+      },
+    },
+    whatsappLanding: {
+      hero: {
+        title: 'Automatizá tu atención en WhatsApp.',
+        description:
+          'Diseñamos flujos conversacionales que responden consultas con claridad, lenguaje natural y foco comercial. Una solución pensada para marcas que venden productos o experiencias vinculadas al vino.',
+        buttonText: 'Coordiná una demo',
+      },
+      whyAutomate: {
+        title: 'Tu canal más activo puede ser también el más eficiente.',
+        description:
+          'WhatsApp concentra la mayoría de las consultas comerciales del sector. Este servicio permite brindar información estructurada y captar datos de personas interesadas, sin depender de la disponibilidad del equipo o responder cada mensaje de forma manual.',
+      },
+      twoObjectives: {
+        title: 'Dos objetivos. Una sola solución.',
+        objective1: {
+          title: '1. Información clara, sin demoras',
+          description:
+            'Respuestas automáticas adaptadas a tu propuesta: productos, precios, medios de pago, visitas, catálogo, contacto, etc. Todo redactado en lenguaje natural y alineado al estilo de tu marca.',
+        },
+        objective2: {
+          title: '2. Captura de datos relevantes',
+          description:
+            'Recolectamos y organizamos la información que necesitás: nombre, correo, ubicación, tipo de interés u otros datos clave para tu negocio. Los campos son totalmente configurables según tus objetivos.',
+        },
+      },
+      whoIsUsing: {
+        title: 'Una herramienta útil para distintos modelos de negocio del vino.',
+        businesses: {
+          business1: 'Bodegas que reciben consultas por visitas y experiencias',
+          business2: 'Rutas del Vino que centralizan propuestas turísticas regionales',
+          business3: 'Tiendas físicas o ecommerce de vinos',
+          business4: 'Importadores y distribuidores que buscan calificar leads',
+          business5: 'Productores con venta directa',
+          business6: 'Wine clubs y proyectos educativos',
+        },
+      },
+      serviceIncludes: {
+        title: '¿Qué incluye el servicio?',
+        features: {
+          feature1: 'Diseño del flujo conversacional según tu negocio siempre con lenguaje natural',
+          feature2: 'Implementación técnica en WhatsApp Business',
+          feature3: 'Conversación con el usuario personalizada en el tono de tu marca',
+          feature4: 'Acceso a los datos generada con cada conversación',
+        },
+      },
+      finalCTA: {
+        title: 'Hacé que cada conversación sume.',
+        description:
+          'Coordiná una demo y conocé cómo este servicio puede ayudarte a escalar tu atención y captar más oportunidades en tu día a día.',
+        buttonText: 'Coordiná una demo',
+        buttonWhatsappText: 'Hola, quiero coordinar una demo del módulo whatsapp',
+        buttonWhatsappPhoneNumber: '+59892043904',
+      },
     },
   },
   academy: {

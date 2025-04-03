@@ -18,6 +18,7 @@ type Props = {
   spanFirst?: boolean
 }
 export default function ServicesClient({ title, description, data, spanFirst }: Props) {
+  const isMultipleOf2 = data.length % 2 === 0
   const isMultipleOf3 = data.length % 3 === 0
 
   return (
@@ -28,7 +29,7 @@ export default function ServicesClient({ title, description, data, spanFirst }: 
       <p className="container text-center text-lg mb-8">{description}</p>
       <div className="container flex items-center justify-center px-8 text-center md:px-6">
         <div
-          className={cn('grid gap-6 lg:gap-8', isMultipleOf3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2')}
+          className={cn('grid gap-6 lg:gap-8', isMultipleOf2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3')}
         >
           {data.map((item, index) => {
             const icon = LucideIcons[item.icon]

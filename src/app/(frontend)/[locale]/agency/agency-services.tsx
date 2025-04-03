@@ -8,13 +8,16 @@ type AgencyServiceText = {
     | 'services.advertising.Title'
     | 'services.customDesign.Title'
     | 'services.tintaStrategy.Title'
+    | 'services.whatsapp.Title'
   description:
     | 'services.strategy.description'
     | 'services.content.description'
     | 'services.advertising.description'
     | 'services.customDesign.description'
     | 'services.tintaStrategy.description'
+    | 'services.whatsapp.description'
   icon: string
+  link?: string
 }
 
 const data: AgencyServiceText[] = [
@@ -43,6 +46,12 @@ const data: AgencyServiceText[] = [
     description: 'services.customDesign.description',
     icon: 'Palette',
   },
+  {
+    title: 'services.whatsapp.Title',
+    description: 'services.whatsapp.description',
+    icon: 'MessageSquare',
+    link: '/agency/whatsapp',
+  },
 ]
 export default async function AgencyServices() {
   const t = await getScopedI18n('agency')
@@ -58,6 +67,6 @@ export default async function AgencyServices() {
   })
 
   return (
-    <ServicesClient title={title} description={description} data={dataWithText} spanFirst={true} />
+    <ServicesClient title={title} description={description} data={dataWithText} spanFirst={false} />
   )
 }

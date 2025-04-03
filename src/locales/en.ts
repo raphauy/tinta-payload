@@ -95,6 +95,66 @@ export default {
         description:
           "We offer personalized and exclusive graphic design solutions for wine brands, ensuring that each visual element is aligned with the brand's identity. From technical data sheets to brand presentations, brochures, and business cards, we focus on presenting your brand in a professional and consistent manner, both in print and digital media.",
       },
+      whatsapp: {
+        Title: 'WhatsApp Module',
+        description:
+          'We design conversational flows that respond to inquiries with clarity, natural language, and commercial focus. A solution designed for brands that sell products or experiences related to wine.',
+      },
+    },
+    whatsappLanding: {
+      hero: {
+        title: 'Automate your WhatsApp service.',
+        description:
+          'We design conversational flows that respond to inquiries with clarity, natural language, and commercial focus. A solution designed for brands that sell products or experiences related to wine.',
+        buttonText: 'Schedule a demo',
+      },
+      whyAutomate: {
+        title: 'Your most active channel can also be the most efficient.',
+        description:
+          'WhatsApp concentrates most of the commercial inquiries in the sector. This service allows you to provide structured information and capture data from interested people, without depending on team availability or manually responding to each message.',
+      },
+      twoObjectives: {
+        title: 'Two objectives. One solution.',
+        objective1: {
+          title: '1. Clear information, without delays',
+          description:
+            "Automated responses adapted to your offer: products, prices, payment methods, visits, catalog, contact, etc. All written in natural language and aligned with your brand's style.",
+        },
+        objective2: {
+          title: '2. Capture of relevant data',
+          description:
+            'We collect and organize the information you need: name, email, location, type of interest, or other key data for your business. The fields are fully configurable according to your objectives.',
+        },
+      },
+      whoIsUsing: {
+        title: 'A useful tool for different wine business models.',
+        businesses: {
+          business1: 'Wineries that receive inquiries about visits and experiences',
+          business2: 'Wine Routes that centralize regional tourist offerings',
+          business3: 'Physical stores or wine e-commerce',
+          business4: 'Importers and distributors looking to qualify leads',
+          business5: 'Producers with direct sales',
+          business6: 'Wine clubs and educational projects',
+        },
+      },
+      serviceIncludes: {
+        title: 'What does the service include?',
+        features: {
+          feature1:
+            'Design of the conversational flow according to your business always with natural language',
+          feature2: 'Technical implementation in WhatsApp Business',
+          feature3: "User conversation personalized in your brand's tone",
+          feature4: 'Access to data generated with each conversation',
+        },
+      },
+      finalCTA: {
+        title: 'Make every conversation count.',
+        description:
+          'Schedule a demo and learn how this service can help you scale your service and capture more opportunities in your day-to-day.',
+        buttonText: 'Schedule a demo',
+        buttonWhatsappText: 'Hello, I want to coordinate a demo of the WhatsApp module',
+        buttonWhatsappPhoneNumber: '+59892043904',
+      },
     },
   },
   academy: {
