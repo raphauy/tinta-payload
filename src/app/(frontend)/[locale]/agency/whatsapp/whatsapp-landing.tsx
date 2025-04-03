@@ -56,11 +56,11 @@ export default async function WhatsAppLanding() {
       <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+            <div className="space-y-2 max-w-[900px]">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 {t('whyAutomate.title')}
               </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {t('whyAutomate.description')}
               </p>
             </div>
@@ -79,7 +79,7 @@ export default async function WhatsAppLanding() {
             </div>
           </div>
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:gap-12 mt-8">
-            <Card className="border-2 border-teal-200">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center space-x-4">
@@ -92,7 +92,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-200">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center space-x-4">
@@ -120,7 +120,7 @@ export default async function WhatsAppLanding() {
             </div>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
@@ -130,7 +130,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
@@ -140,7 +140,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
@@ -150,7 +150,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
@@ -160,7 +160,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
@@ -170,7 +170,7 @@ export default async function WhatsAppLanding() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-2 border-teal-100">
+            <Card className="border-2 border-teal-600">
               <CardContent className="p-6">
                 <div className="flex space-x-4">
                   <div>
