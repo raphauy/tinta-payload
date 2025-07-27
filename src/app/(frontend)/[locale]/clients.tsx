@@ -78,6 +78,15 @@ const mexicanClients = [
   },
 ]
 
+const argentinianClients = [
+  {
+    name: 'BarSol',
+  },
+  {
+    name: 'SdelSol',
+  },
+]
+
 export function Clients() {
   const [imageColor, setimageColor] = useState('N')
   const theme = useTheme()
@@ -140,6 +149,24 @@ export function Clients() {
       </h3>
       <div className="grid grid-cols-1 gap-2">
         {mexicanClients.map((client) => (
+          <Card
+            key={client.name}
+            className="p-4 flex flex-col items-center justify-center w-32 h-32"
+          >
+            <Image
+              src={`/clients/${client.name}_${imageColor}.png`}
+              alt={client.name}
+              width={200}
+              height={200}
+            />
+          </Card>
+        ))}
+      </div>
+      <h3 className="text-2xl font-semibold text-center text-tinta-verde mt-14 mb-8 dark:text-white">
+        Argentina
+      </h3>
+      <div className="grid grid-cols-2 gap-2">
+        {argentinianClients.map((client) => (
           <Card
             key={client.name}
             className="p-4 flex flex-col items-center justify-center w-32 h-32"
