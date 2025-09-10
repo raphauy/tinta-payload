@@ -13,6 +13,7 @@ import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { draftMode } from 'next/headers'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
+import { Analytics } from '@vercel/analytics/next'
 
 import './globals.css'
 import Script from 'next/script'
@@ -61,6 +62,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {children}
           <Footer />
           <WhatsAppButton />
+          <Analytics />
         </Providers>
 
         <Script id="facebook-pixel" strategy="afterInteractive">
