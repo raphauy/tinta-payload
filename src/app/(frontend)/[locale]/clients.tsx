@@ -58,6 +58,9 @@ const uruguayanClients = [
   {
     name: 'Entramado',
   },
+  {
+    name: 'CMO',
+  },
 ]
 
 const chileanClients = [
