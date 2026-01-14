@@ -6,18 +6,17 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
-import { Loader } from 'lucide-react'
+import { Loader, Send } from 'lucide-react'
 import { APIResponse, sendContact } from '@/services/planner-services'
 import { z } from 'zod'
 
 const schema = z.object({
-  name: z.string().optional(),
   email: z
     .string({
       required_error: 'el email es obligatorio.',
       invalid_type_error: 'el email no es válido',
     })
-    .email(),
+    .email({ message: 'email no válido' }),
 })
 
 type ContactFormValues = z.infer<typeof schema>
@@ -29,7 +28,6 @@ export function SubscribeForm({ clientId }: Props) {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
-      name: '',
       email: '',
     },
     mode: 'onChange',
@@ -39,73 +37,66 @@ export function SubscribeForm({ clientId }: Props) {
 
   const onSubmit = async (data: ContactFormValues) => {
     setLoading(true)
-    console.log('data', data)
-    const res = await sendContact(clientId, data.name, data.email)
+    const res = await sendContact(clientId, undefined, data.email)
     setLoading(false)
-    console.log('res', res)
     setResponse(res)
-    // wait 10 seconds and reset the response
+    if (res.ok) {
+      form.reset()
+    }
     setTimeout(() => {
       setResponse(null)
     }, 10000)
   }
 
   return (
-    <div className="mx-auto space-y-12 dark:bg-white dark:text-black bg-black text-white w-full border rounded-2xl max-w-3xl py-16 px-8 sm:p-20 ">
-      <div className="space-y-2 text-center">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-none">
-          Suscríbete a nuestro Newsletter
-        </h3>
+    <div className="mx-auto dark:bg-white/5 dark:text-white bg-black/5 text-black w-full max-w-md rounded-xl py-6 px-6 sm:px-8 border border-gray-300 dark:border-gray-700">
+      <div className="space-y-1 mb-4">
+        <h3 className="text-lg font-semibold text-tinta-verde">Newsletter</h3>
+        <p className="text-sm text-muted-foreground">
+          Recibe novedades sobre el mundo del vino.
+        </p>
       </div>
       {response ? (
         <ResponseBox response={response} />
       ) : (
-        <div className="space-y-2 sm:px-12 md:px-28 text-black dark:text-white">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" noValidate>
-              <div className="space-y-2">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          className="rounded-lg"
-                          placeholder="Ingresa tu nombre"
-                          type="text"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          className="rounded-lg"
-                          placeholder="Ingresa tu correo"
-                          type="email"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <Button type="submit" className="w-full bg-gray-300 text-black hover:bg-gray-400">
-                {loading ? <Loader className="w-5 h-5 animate-spin" /> : <p>Suscribirse</p>}
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} noValidate>
+            <div className="flex gap-2">
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormControl>
+                      <Input
+                        className="rounded-lg bg-background/80 border-border/50"
+                        placeholder="tu@email.com"
+                        type="email"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage className="text-xs mt-1" />
+                  </FormItem>
+                )}
+              />
+              <Button
+                type="submit"
+                variant="outline"
+                className="shrink-0 gap-2 bg-background/80 hover:bg-background"
+                disabled={loading}
+              >
+                {loading ? (
+                  <Loader className="w-4 h-4 animate-spin" />
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    <span className="hidden sm:inline">Suscribirse</span>
+                  </>
+                )}
               </Button>
-            </form>
-          </Form>
-        </div>
+            </div>
+          </form>
+        </Form>
       )}
     </div>
   )
@@ -113,11 +104,11 @@ export function SubscribeForm({ clientId }: Props) {
 
 function ResponseBox({ response }: { response: APIResponse }) {
   return (
-    <div className="p-4 bg-white border rounded-lg shadow-lg">
+    <div className="py-2 px-3 rounded-lg bg-background/80 border border-border/50">
       {response.ok ? (
-        <p className="text-green-600">{response.message}</p>
+        <p className="text-sm text-green-600">{response.message}</p>
       ) : (
-        <p className="text-red-600">{response.message}</p>
+        <p className="text-sm text-red-600">{response.message}</p>
       )}
     </div>
   )

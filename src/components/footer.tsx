@@ -8,9 +8,9 @@ export default function Footer() {
   const clientId = process.env.TINTA_CLIENT_ID
 
   return (
-    <div className="mt-20 pb-1 flex flex-col items-center">
-      <div className="flex flex-col items-center p-8 w-full">
-        {clientId ? <SubscribeForm clientId={clientId} /> : <p>clientId not found</p>}
+    <div className="mt-16 pb-4 flex flex-col items-center">
+      <div className="flex flex-col items-center w-full px-4 mb-6">
+        {clientId ? <SubscribeForm clientId={clientId} /> : null}
       </div>
 
       <div className="flex items-center justify-center h-4">
