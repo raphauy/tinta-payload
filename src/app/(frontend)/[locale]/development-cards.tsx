@@ -1,5 +1,4 @@
 import { getScopedI18n } from "@/locales/server"
-import { Clapperboard, Megaphone, ThumbsUp } from "lucide-react"
 
 export default async function DevelopmentCards() {
   const t = await getScopedI18n("landing.development.services")

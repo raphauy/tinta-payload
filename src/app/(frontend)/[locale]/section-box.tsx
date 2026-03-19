@@ -1,5 +1,4 @@
 import Link from "next/link"
-import DevelopmentCards from "./development-cards"
 
 type Props= {
     title: string
