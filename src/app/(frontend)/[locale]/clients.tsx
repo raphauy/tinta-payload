@@ -73,6 +73,9 @@ const chileanClients = [
   {
     name: 'CasaPadic',
   },
+  {
+    name: 'LaTravesia',
+  },
 ]
 
 const mexicanClients = [
@@ -132,7 +135,7 @@ export function Clients() {
       <h3 className="text-2xl font-semibold text-center text-tinta-verde mt-14 mb-8 dark:text-white">
         Chile
       </h3>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-2">
         {chileanClients.map((client) => (
           <Card
             key={client.name}
