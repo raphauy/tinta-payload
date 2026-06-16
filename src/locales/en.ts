@@ -153,7 +153,7 @@ export default {
           'Schedule a demo and learn how this service can help you scale your service and capture more opportunities in your day-to-day.',
         buttonText: 'Schedule a demo',
         buttonWhatsappText: 'Hello, I want to coordinate a demo of the WhatsApp module',
-        buttonWhatsappPhoneNumber: '+59892043904',
+        buttonWhatsappPhoneNumber: '+59892265737',
       },
     },
   },

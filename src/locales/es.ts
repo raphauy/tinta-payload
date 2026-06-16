@@ -154,7 +154,7 @@ export default {
           'Coordiná una demo y conocé cómo este servicio puede ayudarte a escalar tu atención y captar más oportunidades en tu día a día.',
         buttonText: 'Coordiná una demo',
         buttonWhatsappText: 'Hola, quiero coordinar una demo del módulo whatsapp',
-        buttonWhatsappPhoneNumber: '+59892043904',
+        buttonWhatsappPhoneNumber: '+59892265737',
       },
     },
   },

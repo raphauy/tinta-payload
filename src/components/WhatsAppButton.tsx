@@ -6,7 +6,7 @@ import Image from 'next/image'
 export const WhatsAppButton = () => {
   const handleClick = () => {
     window.open(
-      'https://wa.me/59892043904?text=¡Hola! Me gustaría recibir más información',
+      'https://wa.me/59892265737?text=¡Hola! Me gustaría recibir más información',
       '_blank',
     )
   }
