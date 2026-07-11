@@ -53,7 +53,7 @@ export default {
     lastSection: {
       title: 'Why are we different?',
       description:
-        'We are different because we have a deep passion and knowledge of the vitivinícola sector, which allows us to understand and connect with the specific needs of the world of wine with a holistic and strategic approach.',
+        'We are different because we have a deep passion and knowledge of the vitivinícola sector, which allows us to understand and connect with the specific needs of the wine world with a holistic and strategic approach.',
     },
     clients: {
       Title: 'Our clients',
@@ -168,6 +168,13 @@ export default {
   },
   manifest: {
     title: 'Tinta Manifesto',
+    heroEyebrow: 'Manifesto',
+    heroTitleStrong: '10 principles',
+    heroTitleRest: 'that guide every Tinta project',
+    heroCopy:
+      'This is how we think, decide and work — with our clients, with our team and with the wine world.',
+    ctaTitle: 'Does your brand identify with these values?',
+    ctaDesc: "Tell us about your project and let's find the next step to grow.",
     enfoqueTitle: 'Focus on the essentials',
     enfoqueDescription:
       'In a world saturated with information, we focus on what is truly important to achieve our goals. We apply the Pareto principle (80-20 rule) in everything we do, believing that 80% of results come from 20% of actions.',
@@ -176,7 +183,7 @@ export default {
       'We put people at the heart of our actions. We are a service company, created by people and for people.',
     solucionesTitle: 'Effective solutions',
     solucionesDescription:
-      'We identify problems through active listening to our customers and propose efficient solutions. We know the world of wine, its challenges and opportunities, always keeping our feet on the ground.',
+      'We identify problems through active listening to our customers and propose efficient solutions. We know the wine world, its challenges and opportunities, always keeping our feet on the ground.',
     simplificacionTitle: 'Simplification',
     simplificacionDescription: 'We turn the complex into simple and accessible.',
     relacionesTitle: 'Long-lasting relationships',
@@ -198,6 +205,89 @@ export default {
     sostenibilidadDescription:
       'We are committed to sustainable practices, thinking about the care of our planet and leaving it better than we found it.',
   },
+  home: {
+    hero: {
+      titleTop: 'Wine culture',
+      titleBottom: 'ambassadors',
+      copy: 'Our services are designed to give visibility to the stories of wine producers, reduce the digital gap, and promote professional education in the wine industry.',
+      ctaServices: 'Our services',
+    },
+    stats: {
+      marcas: 'Brands advised',
+      anios: 'Years in the wine world',
+      wset: 'Partner',
+      equipo: 'Specialized team',
+    },
+    services: {
+      sectionTitle: 'Tinta Ecosystem',
+      sectionDesc:
+        'We drive the success of your wine brand through digital marketing strategies and the creation of authentic, engaging content.',
+      brandingTitle: 'Branding',
+      brandingDesc:
+        'We build complete brand identities: naming, logo, palette, voice and visual system, ready to stand the test of time.',
+      performanceTitle: 'Advertising',
+      performanceDesc:
+        'Results-driven digital advertising: lead generation, conversations with customers and measurable sales for your brand.',
+      tecnologiaTitle: 'Technology',
+      tecnologiaDesc:
+        'We develop our own tools that combine automation and data to make your brand communication more agile and effective.',
+      experienciasTitle: 'Experiences',
+      experienciasDesc:
+        'We design tastings, wine tourism tours and activations that bring people closer to the wine world directly.',
+      editorialTitle: 'Editorial',
+      editorialDesc:
+        'We publish and share specialized knowledge, translating experience and passion for wine into texts that educate, inspire and enrich wine culture.',
+      prTitle: 'PR',
+      prDesc:
+        'We connect brands with specialized wine press to gain visibility and credibility in the media that matter.',
+    },
+    academy: {
+      title: 'Education with global standards',
+      desc: 'We believe in the transformative power of knowledge and offer an education of excellence that combines theory, practice and experience, allowing you to live and appreciate wine culture in a meaningful way. That is why we are the first and only WSET APP in Uruguay.',
+      cta: 'Learn more',
+    },
+    portfolio: {
+      title: 'Authentic brands and stories',
+      desc: 'We support the growth and professionalization of brands and organizations linked to wine, gastronomy and tourism.',
+      more: 'See more projects on Behance',
+      cerroChapeu: 'Monthly Content Creation & Advertising',
+      cetto: 'Monthly Content Creation',
+      traversa: 'Monthly Content Creation & Advertising',
+      primavento: 'Monthly Content Creation & Advertising',
+      casaPadic: 'Brand strategy & label design',
+      entramado: 'Brand strategy',
+    },
+    diferentes: {
+      title: 'Why are we different?',
+      desc: 'We stand out for our passion and deep knowledge of the wine sector, which allows us to understand and connect with the specific needs of the wine world with a comprehensive, strategic outlook.',
+      badge: 'Photos of our clients',
+    },
+    testimonials: {
+      carrau:
+        'With Tinta we gained consistency, clarity and quality in our message. Their work defends exactly the image we want to build for our audience.',
+      cetto:
+        'Tinta managed to translate complex ideas into clear messages aligned with our audiences, bringing a strategic perspective that goes beyond design.',
+      pose: 'Tinta helped us a lot to be present from the very beginning, make our products known and build a close exchange with our customers.',
+    },
+    contacto: {
+      title: 'Shall we talk about your brand?',
+      desc: "Tell us about your project and let's find the next step to grow.",
+    },
+  },
+  footer: {
+    tagline: 'Ambassadors of Wine Culture',
+    description:
+      'We drive the wine world with marketing, communication and certified education, sharing knowledge to connect and grow.',
+    newsletterTitle: 'Newsletter',
+    newsletterDesc: 'Stay up to date with news, trends and updates from the wine world.',
+    emailPlaceholder: 'you@email.com',
+    subscribe: 'Subscribe',
+    subscribed: 'Thanks for subscribing! 🍷',
+    newsletterError: 'Something went wrong. Please try again.',
+    exploreTitle: 'Explore',
+    followTitle: 'Follow us',
+    rights: 'All rights reserved.',
+  },
   blog: {
     showing: 'Showing',
     posts: 'posts',
@@ -205,8 +295,12 @@ export default {
   menu: {
     about: 'About',
     agency: 'Agency',
+    servicios: 'Services',
     academy: 'Academy',
+    portafolio: 'Portfolio',
     manifest: 'Manifesto',
     blog: 'Blog',
+    talk: "Let's talk",
+    search: 'Search',
   },
 } as const

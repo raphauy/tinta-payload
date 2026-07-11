@@ -2,13 +2,11 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { WHATSAPP_URL } from '@/utilities/site'
 
 export const WhatsAppButton = () => {
   const handleClick = () => {
-    window.open(
-      'https://wa.me/59892265737?text=¡Hola! Me gustaría recibir más información',
-      '_blank',
-    )
+    window.open(WHATSAPP_URL, '_blank')
   }
 
   return (

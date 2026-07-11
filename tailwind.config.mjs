@@ -53,6 +53,14 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        // Rediseño 2026 (handoff Ari) — paleta charcoal/paper
+        brand: {
+          DEFAULT: '#2E2E2E',
+          light: '#5C5C5C',
+          dark: '#1B1B1B',
+        },
+        ink: '#2E2E2E',
+        paper: '#EBEBEB',
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',

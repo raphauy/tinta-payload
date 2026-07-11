@@ -13,6 +13,7 @@ import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { draftMode } from 'next/headers'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
+import RevealObserver from '@/components/RevealObserver'
 import { Analytics } from '@vercel/analytics/next'
 
 import './globals.css'
@@ -62,6 +63,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {children}
           <Footer />
           <WhatsAppButton />
+          <RevealObserver />
           <Analytics />
         </Providers>
 

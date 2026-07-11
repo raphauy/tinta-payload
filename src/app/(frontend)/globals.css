@@ -50,7 +50,7 @@
   }
 
   [data-theme='dark'] {
-    --background: 0 0% 0%;
+    --background: 0 0% 8%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -93,11 +93,116 @@
   }
 }
 
-html {
+/*
+ * Nota: se removió el guard `html { opacity: 0 }` (con override por
+ * `[data-theme]`) porque podía dejar páginas en blanco de forma persistente
+ * cuando `data-theme` tardaba en resolverse (páginas con queries a la DB como
+ * /posts y /search). El flash de tema se previene ahora con el <script> inline
+ * de InitTheme, que setea `data-theme` antes del primer paint.
+ */
+
+/* ==========================================================================
+   Rediseño 2026 (handoff Ari) — animaciones
+   ========================================================================== */
+
+/* Reveal al hacer scroll (activadas por RevealObserver agregando .in-view) */
+.reveal {
   opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 {
+  transition-delay: 0.1s;
+}
+.reveal-d2 {
+  transition-delay: 0.2s;
+}
+.reveal-d3 {
+  transition-delay: 0.3s;
+}
+.reveal-d4 {
+  transition-delay: 0.4s;
+}
+.reveal-d5 {
+  transition-delay: 0.5s;
+}
+.reveal-d6 {
+  transition-delay: 0.6s;
 }
 
-html[data-theme='dark'],
-html[data-theme='light'] {
-  opacity: initial;
+/* Carrusel Academy (crossfade CSS puro, 3 fotos) */
+@keyframes academy-fade {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.academy-carousel .carousel-img {
+  animation: academy-fade 12s infinite;
+}
+
+/* Carrusel Diferentes (crossfade CSS puro, 5 fotos) */
+@keyframes diferentes-fade {
+  0% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.diferentes-carousel .carousel-img {
+  animation: diferentes-fade 20s infinite;
+}
+
+/* Marquee de logos de clientes (loop continuo, logos duplicados en el HTML) */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  .academy-carousel .carousel-img,
+  .diferentes-carousel .carousel-img {
+    animation: none;
+    opacity: 0;
+  }
+  .academy-carousel .carousel-img:first-child,
+  .diferentes-carousel .carousel-img:first-child {
+    opacity: 1;
+  }
 }

@@ -17,3 +17,5 @@ public/sitemap*.xml
 .cursorrules
 
 dev.log
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

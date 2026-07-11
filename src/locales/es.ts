@@ -169,6 +169,13 @@ export default {
   },
   manifest: {
     title: 'Manifiesto Tinta',
+    heroEyebrow: 'Manifiesto',
+    heroTitleStrong: '10 principios',
+    heroTitleRest: 'que guían cada proyecto de Tinta',
+    heroCopy:
+      'Así pensamos, decidimos y trabajamos — con nuestros clientes, con nuestro equipo y con el mundo del vino.',
+    ctaTitle: '¿Tu marca se identifica con estos valores?',
+    ctaDesc: 'Contanos sobre tu proyecto y veamos cuál es el próximo paso para crecer.',
     enfoqueTitle: 'Enfoque en lo esencial',
     enfoqueDescription:
       'En un mundo saturado de información, nos centramos en lo verdaderamente importante para alcanzar nuestros objetivos. Aplicamos el principio de Pareto (regla 80-20) en todo lo que hacemos, creyendo que el 80% de los resultados proviene del 20% de las acciones.',
@@ -199,6 +206,89 @@ export default {
     sostenibilidadDescription:
       'Nos comprometemos con prácticas sostenibles, pensando en el cuidado de nuestro planeta y en dejarlo mejor de lo que lo encontramos.',
   },
+  home: {
+    hero: {
+      titleTop: 'Embajadores de',
+      titleBottom: 'la cultura del vino',
+      copy: 'Nuestros servicios están diseñados para dar visibilidad a las historias de los productores vitivinícolas, reducir la brecha digital y promover la formación profesional en el mundo del vino.',
+      ctaServices: 'Ver servicios',
+    },
+    stats: {
+      marcas: 'Marcas asesoradas',
+      anios: 'Años en el mundo del vino',
+      wset: 'Partner',
+      equipo: 'Equipo especializado',
+    },
+    services: {
+      sectionTitle: 'Ecosistema Tinta',
+      sectionDesc:
+        'Impulsamos el éxito de su marca de vinos a través de estrategias de marketing digital y creación de contenido auténtico y atractivo.',
+      brandingTitle: 'Branding',
+      brandingDesc:
+        'Construimos identidades de marca completas: naming, logotipo, paleta, voz y sistema visual, listos para sostenerse en el tiempo.',
+      performanceTitle: 'Publicidad',
+      performanceDesc:
+        'Pauta digital orientada a resultados: generación de leads, conversaciones con clientes y ventas medibles para tu marca.',
+      tecnologiaTitle: 'Tecnología',
+      tecnologiaDesc:
+        'Desarrollamos herramientas propias que combinan automatización y datos para que la comunicación de tu marca sea más ágil y efectiva.',
+      experienciasTitle: 'Experiencias',
+      experienciasDesc:
+        'Diseñamos catas, recorridos de enoturismo y activaciones que acercan a las personas al mundo del vino de forma directa.',
+      editorialTitle: 'Editorial',
+      editorialDesc:
+        'Publicamos y compartimos conocimiento especializado, traduciendo la experiencia y pasión por el vino en textos que educan, inspiran y enriquecen la cultura vitivinícola.',
+      prTitle: 'PR',
+      prDesc:
+        'Conectamos a las marcas con prensa especializada del mundo del vino, para ganar visibilidad y credibilidad en los medios que importan.',
+    },
+    academy: {
+      title: 'Educación con estándares globales',
+      desc: 'Creemos en el poder transformador del conocimiento y ofrecemos una educación de excelencia que combina teoría, práctica y experiencia, permitiéndote vivir y apreciar la cultura del vino de una manera significativa. Por eso somos la primera y única APP WSET en Uruguay.',
+      cta: 'Conocé más',
+    },
+    portfolio: {
+      title: 'Marcas e historias auténticas',
+      desc: 'Acompañamos en el crecimiento y profesionalización a marcas y organizaciones vinculadas al vino, la gastronomía y el turismo.',
+      more: 'Ver más proyectos en Behance',
+      cerroChapeu: 'Creación de Contenido Mensual & Publicidad',
+      cetto: 'Creación de Contenido Mensual',
+      traversa: 'Creación de Contenido Mensual & Publicidad',
+      primavento: 'Creación de Contenido Mensual & Publicidad',
+      casaPadic: 'Estrategia de marca & diseño de etiquetas',
+      entramado: 'Estrategia de marca',
+    },
+    diferentes: {
+      title: '¿Por qué somos diferentes?',
+      desc: 'Nos diferenciamos por nuestra pasión y conocimiento profundo del sector vitivinícola, lo que nos permite comprender y conectar con las necesidades específicas del mundo del vino con una mirada integral y estratégica.',
+      badge: 'Fotos de nuestros clientes',
+    },
+    testimonials: {
+      carrau:
+        'Con Tinta ganamos constancia, claridad y calidad en el mensaje. Su trabajo defiende exactamente la imagen que queremos construir para nuestra audiencia.',
+      cetto:
+        'Tinta logró traducir ideas complejas en mensajes claros y alineados con nuestros públicos, aportando una mirada estratégica que va más allá del diseño.',
+      pose: 'Tinta nos ayudó muchísimo a estar presentes desde los inicios, dar a conocer nuestros productos y generar un intercambio cercano con nuestros clientes.',
+    },
+    contacto: {
+      title: '¿Charlamos sobre tu marca?',
+      desc: 'Contanos sobre tu proyecto y veamos cuál es el próximo paso para crecer.',
+    },
+  },
+  footer: {
+    tagline: 'Embajadores de la Cultura del Vino',
+    description:
+      'Impulsamos el mundo del vino con marketing, comunicación y educación certificada, compartiendo conocimiento para conectar y crecer.',
+    newsletterTitle: 'Newsletter',
+    newsletterDesc: 'Mantenete informado sobre noticias, tendencias y novedades del mundo del vino.',
+    emailPlaceholder: 'tu@email.com',
+    subscribe: 'Suscribirse',
+    subscribed: '¡Gracias por suscribirte! 🍷',
+    newsletterError: 'Ocurrió un error. Intentá de nuevo.',
+    exploreTitle: 'Explorar',
+    followTitle: 'Síguenos',
+    rights: 'Todos los derechos reservados.',
+  },
   blog: {
     showing: 'Mostrando',
     posts: 'posts',
@@ -206,8 +296,12 @@ export default {
   menu: {
     about: 'Nosotros',
     agency: 'Agency',
+    servicios: 'Servicios',
     academy: 'Academy',
+    portafolio: 'Portafolio',
     manifest: 'Manifiesto',
     blog: 'Blog',
+    talk: 'Conversemos',
+    search: 'Buscar',
   },
 } as const

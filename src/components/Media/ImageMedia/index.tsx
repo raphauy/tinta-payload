@@ -9,7 +9,6 @@ import React from 'react'
 import type { Props as MediaProps } from '../types'
 
 import { cssVariables } from '@/cssVariables'
-import { getClientSideURL } from '@/utilities/getURL'
 
 const { breakpoints } = cssVariables
 
@@ -47,7 +46,12 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     height = fullHeight!
     alt = altFromResource || ''
 
-    src = `${getClientSideURL()}${url}`
+    // Usar la URL relativa tal cual (mismo origen). Anteponer el origen la volvía
+    // absoluta y `next/image` exigía que el host estuviera en `remotePatterns`,
+    // lo que rompía (página en blanco) en hosts de dev no configurados como
+    // tinta-web.localhost. Una URL relativa se trata como imagen local y funciona
+    // en cualquier host, dev o prod.
+    src = url || ''
   }
 
   const loading = loadingFromProps || 'lazy'
